@@ -6,7 +6,7 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:31:20 by aattak            #+#    #+#             */
-/*   Updated: 2023/12/23 18:52:15 by aattak           ###   ########.fr       */
+/*   Updated: 2023/12/23 19:42:28 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	ft_printf_s(char *s, int *count)
 {
 	size_t	i;
 
+	if (!s)
+	{
+		ft_printf_s("(null)", count);
+		return ;
+	}
 	i = 0;
 	while (s[i])
 		ft_printf_c(s[i++], count);
